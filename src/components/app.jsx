@@ -8,13 +8,22 @@ class App extends Component {
 
   render() {
     // TODO: fetch gifs from giphy api
-    const gifs = [];
+    const gifs = [
+      { id: 'a93jwI0wkWTQs' },
+      { id: 'a93jwI0wkWTQs' },
+      { id: 'a93jwI0wkWTQs' },
+      { id: 'a93jwI0wkWTQs' },
+      { id: 'a93jwI0wkWTQs' }
+    ];
 
+    const gif = [
+      { id: 'Zk9mW5OmXTz9e' }
+    ];
 
     return (
       <div>
         <div className="left-scene">
-          <Gif />
+          <Gif gif={gif} />
         </div>
         <div className="right-scene">
           <GifList gifs={gifs} />
