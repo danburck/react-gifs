@@ -1,4 +1,6 @@
-# react-boilerplate
+# react-gifs
+
+Exercsed creating a React App to search for gifs with [giphy-api](https://www.npmjs.com/package/giphy-api) and display them.
 
 Simple react starter with the following config:
 
