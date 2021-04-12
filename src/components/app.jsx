@@ -14,16 +14,11 @@ class App extends Component {
       gifs: [],
       selectedGifId: 'l14qxlCgJ0zUk'
     };
-    this.search('pokemon');
   }
 
-  componentDidMount() {
+  selectGif = (id) => {
     this.setState({
-      gifs: [
-        { id: 'a93jwI0wkWTQs' },
-        { id: 'JHCcEc9vLvHZS' },
-        { id: 'l14qxlCgJ0zUk' }
-      ]
+      selectedGifId: id
     });
   }
 
@@ -45,11 +40,14 @@ class App extends Component {
         <div className="left-scene">
           <SearchBar search={this.search} />
           <div className="selected-gif">
-            <Gif id={this.state.selectedGifId} key={this.state.selectedGifId} />
+            <Gif
+              id={this.state.selectedGifId}
+              key={this.state.selectedGifId}
+              />
           </div>
         </div>
         <div className="right-scene">
-          <GifList gifs={this.state.gifs} />
+          <GifList gifs={this.state.gifs} selectGif={this.selectGif} />
         </div>
       </div>
     );
